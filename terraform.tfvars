@@ -2,8 +2,8 @@ terragrunt = {
   remote_state {
     backend = "s3"
     config {
-      bucket         = "tkpd-terraform-platform-aliyun"
-      key            = "${path_relative_to_include()}/terraform.tfstate"
+      bucket         = "tkpd-terragrunt-platform-aliyun"
+      key            = "state/${path_relative_to_include()}/terraform.tfstate"
       endpoint       = "https://s3-ap-southeast-1.amazonaws.com"
       region         = "ap-southeast-1"
     }
